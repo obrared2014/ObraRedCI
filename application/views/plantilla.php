@@ -12,4 +12,4 @@
     <body>
         <div class="container"><br /><br /><br /><br /><br /><br />
             <?php
-                echo $variable;
+                echo $variable; // variable desde el controlador welcome
