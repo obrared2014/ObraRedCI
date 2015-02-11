@@ -4,12 +4,11 @@
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <title>...:::ObraRed:::...</title>
-        <link rel="stylesheet" href="<?php base_url();?>assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php base_url();?>assets/css/bootstrap.css">
         <link rel="stylesheet" href="<?php base_url();?>assets/css/bootstrap-theme.min.css">
         <script src="<?php base_url();?>assets/js/jquery-1.11.2.min.js"></script>
         <script src="<?php base_url();?>assets/js/bootstrap.min.js"></script>
+        <!--<script type="text/javascript" src="Controlador/Javascript/funciones.js"></script>-->
     </head>
     <body>
-        <div class="container"><br /><br /><br /><br /><br /><br />
-            <?php
-                echo $variable; // variable desde el controlador welcome
+        <div class="container">

@@ -24,14 +24,17 @@ class Welcome extends CI_Controller {
         session_start();
         $seccion = filter_input(INPUT_GET, "sec");
         $idPress = filter_input(INPUT_GET, "idPres");
+        
+        $this->load->view('plantilla');
+        $this->load->view('cabecera');
+        
         if (empty($seccion)) {
             $seccion = 'Inicio';
         }
         if (!$_SESSION) {
             switch ($seccion) {
                 case "Inicio":
-                    $var['variable'] = 'inicio';
-                    $this->load->view('plantilla', $var);
+                    $this->load->view('carousel');
                     break;
                 case "Servicios":
                     $var['variable'] = 'Servicios';
@@ -167,7 +170,6 @@ class Welcome extends CI_Controller {
                     break;
             }
         }
-        $this->load->view('cabecera');
     }
 
 }
