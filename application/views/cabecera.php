@@ -25,13 +25,11 @@
                         <li><a data-toggle="modal" href="#" data-target="#formulario-contacto"><b class="glyphicon glyphicon-envelope"></b>&nbsp;Contacto</a></li>
                     </ul>
                 </li>
-                <!--<li id="contacto_logout" style="display:block"><a data-toggle="modal" href="#" data-target="#formulario-contacto"><b class="glyphicon glyphicon-envelope"></b>&nbsp;Contacto</a></li>-->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="glyphicon glyphicon-star"></b>&nbsp;Presupuesto <b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="?sec=Presupuesto"><b class="glyphicon glyphicon-list-alt"></b>&nbsp;Crear Presupuesto</a></li>
                         <li style="display: none;" id="mis_presupuestos"><a href="?sec=muestra_presupuestos"><b class="glyphicon glyphicon-folder-open"></b>&nbsp;Mis Presupuestos</a></li> 
-                        <li><a href="?sec=Buscar"><b class="glyphicon glyphicon-search"></b>&nbsp;Buscar</a></li>
                     </ul>
                 </li>               
             </ul>

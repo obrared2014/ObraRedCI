@@ -1,9 +1,12 @@
 <?php
 
-if (!defined('BASEPATH'))
-    exit('No direct script access allowed');
+if (!defined('BASEPATH'))exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
+    function __construct() {
+        parent::__construct();
+        $this->load->helper('form');
+    }
 
     /**
      * Index Page for this controller.
@@ -27,6 +30,9 @@ class Welcome extends CI_Controller {
         
         $this->load->view('plantilla');
         $this->load->view('cabecera');
+        $this->load->view('contacto');
+        $this->load->view('login');
+        $this->load->view('registro_usuario');
         
         if (empty($seccion)) {
             $seccion = 'Inicio';
@@ -50,8 +56,7 @@ class Welcome extends CI_Controller {
                     $this->load->view('mision');
                     break;
                 case "Contacto":
-                    $var['variable'] = 'Contacto';
-                    $this->load->view('plantilla', $var);
+                    $this->load->view('contacto');
                     break;
                 case "Codigo":
                     $var['variable'] = 'Codigo';
@@ -60,18 +65,9 @@ class Welcome extends CI_Controller {
                 case "Presupuesto":
                     $this->load->view('presupuesto');
                     break;
-                case "ResBuscar":
-                    $var['variable'] = 'ResBuscar';
-                    $this->load->view('plantilla', $var);
-                    break;
-                case "Buscar":
-                    $var['variable'] = 'Buscar';
-                    $this->load->view('plantilla', $var);
-                    break;
                 case "Agrega_Materiales":
                     $var['variable'] = 'Agrega_Materiales';
                     $this->load->view('plantilla', $var);
-                    //$this->load->view('cabecera');
                     break;
                 default:
                     $var['variable'] = 'inicio';
@@ -119,14 +115,6 @@ class Welcome extends CI_Controller {
                     $var['variable'] = 'Perfil';
                     $this->load->view('plantilla', $var);
                     break;
-                case "ResBuscar":
-                    $var['variable'] = 'ResBuscar';
-                    $this->load->view('plantilla', $var);
-                    break;
-                case "Buscar":
-                    $var['variable'] = 'Buscar';
-                    $this->load->view('plantilla', $var);
-                    break;
                 case "Agrega_Materiales":
                     $var['variable'] = 'Agrega_Materiales';
                     $this->load->view('plantilla', $var);
@@ -165,6 +153,7 @@ class Welcome extends CI_Controller {
                     break;
             }
         }
+        $this->load->view('footer');
     }
 
 }
