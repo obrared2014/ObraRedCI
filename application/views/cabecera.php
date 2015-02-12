@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="?sec=Inicio"><img src="<?= base_url();?>assets/img/LOGO_2.png ?>" width="120px"/></a><!-- logo ObraRed -->
+            <a href="?sec=Inicio"><img src="<?php base_url();?>assets/img/LOGO_2.png ?>" width="120px"/></a><!-- logo ObraRed -->
         </div>
         <!-- Recoge los enlaces de navegación, formularios y otros contenidos para alternar -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

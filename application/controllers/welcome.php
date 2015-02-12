@@ -41,16 +41,13 @@ class Welcome extends CI_Controller {
                     $this->load->view('plantilla', $var);
                     break;
                 case "Nosotros":
-                    $var['variable'] = 'Nosotros';
-                    $this->load->view('plantilla', $var);
+                    $this->load->view('quienes_somos');
                     break;
                 case "Vision":
-                    $var['variable'] = 'Vision';
-                    $this->load->view('plantilla', $var);
+                    $this->load->view('vision');
                     break;
                 case "Mision":
-                    $var['variable'] = 'Mision';
-                    $this->load->view('plantilla', $var);
+                    $this->load->view('mision');
                     break;
                 case "Contacto":
                     $var['variable'] = 'Contacto';
@@ -61,8 +58,7 @@ class Welcome extends CI_Controller {
                     $this->load->view('plantilla', $var);
                     break;
                 case "Presupuesto":
-                    $var['variable'] = 'Presupuesto';
-                    $this->load->view('plantilla', $var);
+                    $this->load->view('presupuesto');
                     break;
                 case "ResBuscar":
                     $var['variable'] = 'ResBuscar';
@@ -93,8 +89,7 @@ class Welcome extends CI_Controller {
                     $this->load->view('plantilla', $var);
                     break;
                 case "Nosotros":
-                    $var['variable'] = 'Nosotros';
-                    $this->load->view('plantilla', $var);
+                    $this->load->view('quienes_somos');
                     break;
                 case "Vision":
                     $var['variable'] = 'Vision';

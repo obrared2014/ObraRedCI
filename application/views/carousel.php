@@ -269,7 +269,7 @@
     </div>
     <div class="col-lg-8">
         <div class="row">
-            <div class="col-lg-3 col-xs-3"><img src="<?= base_url();?>assets/img/caricatura_001.png" class="img-responsive"/></div>
+            <div class="col-lg-3 col-xs-3"><img src="<?php base_url();?>assets/img/caricatura_001.png" class="img-responsive"/></div>
             <div class="col-lg-9 col-xs-9">
                 <h4><span class="glyphicon glyphicon-star-empty"></span>Gratis</h4>
                 <h4><small>&nbsp;- Realiza varios presupuestos de construcción de forma gratuita.</small></h4>
@@ -289,20 +289,20 @@
         <br/><br/>
         <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
             <div class="carousel-inner">
-                <div class="item active"><img src="<?= base_url();?>assets/img/Ferreteria/Ferreterias001.jpg" class="img-responsive"></div>
-                <div class="item"><img src="<?= base_url();?>assets/img/Ferreteria/Ferreterias008.jpg" class="img-responsive"></div>
-                <div class="item"><img src="<?= base_url();?>assets/img/Barracas/Barraca_001.jpg" class="img-responsive"></div>
-                <div class="item"><img src="<?= base_url();?>assets/img/Ferreteria/Ferreterias004.jpg" class="img-responsive"></div>
-                <div class="item"><img src="<?= base_url();?>assets/img/Transportes/Transporte_001.jpg" class="img-responsive"></div>
-                <div class="item"><img src="<?= base_url();?>assets/img/Ferreteria/Ferreterias002.jpg" class="img-responsive"></div>
-                <div class="item"><img src="<?= base_url();?>assets/img/Barracas/Barraca_002.jpg" class="img-responsive"></div>
-                <div class="item"><img src="<?= base_url();?>assets/img/Ferreteria/Ferreterias005.jpg" class="img-responsive"></div>
-                <div class="item"><img src="<?= base_url();?>assets/img/Transportes/Transporte_002.jpg" class="img-responsive"></div>
-                <div class="item"><img src="<?= base_url();?>assets/img/Ferreteria/Ferreterias003.jpg" class="img-responsive"></div>
-                <div class="item"><img src="<?= base_url();?>assets/img/Barracas/Barraca_003.jpg" class="img-responsive"></div>
-                <div class="item"><img src="<?= base_url();?>assets/img/Ferreteria/Ferreterias006.jpg" class="img-responsive"></div>
-                <div class="item"><img src="<?= base_url();?>assets/img/Transportes/Transporte_003.jpg" class="img-responsive"></div>
-                <div class="item"><img src="<?= base_url();?>assets/img/Ferreteria/Ferreterias007.jpg" class="img-responsive"></div>
+                <div class="item active"><img src="<?php base_url();?>assets/img/Ferreteria/Ferreterias001.jpg" class="img-responsive"></div>
+                <div class="item"><img src="<?php base_url();?>assets/img/Ferreteria/Ferreterias008.jpg" class="img-responsive"></div>
+                <div class="item"><img src="<?php base_url();?>assets/img/Barracas/Barraca_001.jpg" class="img-responsive"></div>
+                <div class="item"><img src="<?php base_url();?>assets/img/Ferreteria/Ferreterias004.jpg" class="img-responsive"></div>
+                <div class="item"><img src="<?php base_url();?>assets/img/Transportes/Transporte_001.jpg" class="img-responsive"></div>
+                <div class="item"><img src="<?php base_url();?>assets/img/Ferreteria/Ferreterias002.jpg" class="img-responsive"></div>
+                <div class="item"><img src="<?php base_url();?>assets/img/Barracas/Barraca_002.jpg" class="img-responsive"></div>
+                <div class="item"><img src="<?php base_url();?>assets/img/Ferreteria/Ferreterias005.jpg" class="img-responsive"></div>
+                <div class="item"><img src="<?php base_url();?>assets/img/Transportes/Transporte_002.jpg" class="img-responsive"></div>
+                <div class="item"><img src="<?php base_url();?>assets/img/Ferreteria/Ferreterias003.jpg" class="img-responsive"></div>
+                <div class="item"><img src="<?php base_url();?>assets/img/Barracas/Barraca_003.jpg" class="img-responsive"></div>
+                <div class="item"><img src="<?php base_url();?>assets/img/Ferreteria/Ferreterias006.jpg" class="img-responsive"></div>
+                <div class="item"><img src="<?php base_url();?>assets/img/Transportes/Transporte_003.jpg" class="img-responsive"></div>
+                <div class="item"><img src="<?php base_url();?>assets/img/Ferreteria/Ferreterias007.jpg" class="img-responsive"></div>
             </div>
         </div>
     </div>
