@@ -42,6 +42,37 @@ class Welcome extends CI_Controller {
                 case "Inicio":
                     $this->load->view('carousel');
                     break;
+//                case "Servicios":
+//                    $var['variable'] = 'Servicios';
+//                    $this->load->view('plantilla', $var);
+//                    break;
+                case "Nosotros":
+                    $this->load->view('quienes_somos');
+                    break;
+                case "Vision":
+                    $this->load->view('vision');
+                    break;
+                case "Mision":
+                    $this->load->view('mision');
+                    break;
+                case "Contacto":
+                    $this->load->view('contacto');
+                    break;
+                case "Codigo":
+                    $this->load->view('codigo');
+                    break;
+                case "Presupuesto":
+                    $this->load->view('presupuesto');
+                    break;
+                default:
+                    $this->load->view('inicio');
+                    break;
+            }
+        } else {
+            switch ($seccion) {
+                case "Inicio":
+                    $this->load->view('carousel');
+                    break;
                 case "Servicios":
                     $var['variable'] = 'Servicios';
                     $this->load->view('plantilla', $var);
@@ -58,51 +89,9 @@ class Welcome extends CI_Controller {
                 case "Contacto":
                     $this->load->view('contacto');
                     break;
-                case "Codigo":
-                    $var['variable'] = 'Codigo';
-                    $this->load->view('plantilla', $var);
-                    break;
                 case "Presupuesto":
                     $this->load->view('presupuesto');
-                    break;
-                case "Agrega_Materiales":
-                    $var['variable'] = 'Agrega_Materiales';
-                    $this->load->view('plantilla', $var);
-                    break;
-                default:
-                    $var['variable'] = 'inicio';
-                    $this->load->view('plantilla', $var);
-                    break;
-            }
-        } else {
-            switch ($seccion) {
-                case "Inicio":
-                    $var['variable'] = 'inicio'; //solo para verificar los case..
-                    $this->load->view('plantilla', $var);
-                    break;
-                case "Servicios":
-                    $var['variable'] = 'Servicios';
-                    $this->load->view('plantilla', $var);
-                    break;
-                case "Nosotros":
-                    $this->load->view('quienes_somos');
-                    break;
-                case "Vision":
-                    $var['variable'] = 'Vision';
-                    $this->load->view('plantilla', $var);
-                    break;
-                case "Mision":
-                    $var['variable'] = 'Mision';
-                    $this->load->view('plantilla', $var);
-                    break;
-                case "Contacto":
-                    $var['variable'] = 'Contacto';
-                    $this->load->view('plantilla', $var);
-                    break;
-                case "Presupuesto":
-                    $var['variable'] = 'Presupuesto';
-                    $this->load->view('plantilla', $var);
-                    break;
+                    break; 
                 case "Login":
                     $var['variable'] = 'Login';
                     $this->load->view('plantilla', $var);
@@ -112,40 +101,34 @@ class Welcome extends CI_Controller {
                     $this->load->view('plantilla', $var);
                     break;
                 case "Perfil":
-                    $var['variable'] = 'Perfil';
-                    $this->load->view('plantilla', $var);
+                    $this->load->view('perfil');
                     break;
                 case "Agrega_Materiales":
-                    $var['variable'] = 'Agrega_Materiales';
-                    $this->load->view('plantilla', $var);
+                    $this->load->view('registro_materiales');
                     break;
                 case "Cotizacion":
                     $var['variable'] = 'Cotizacion';
                     $this->load->view('plantilla', $var);
                     break;
                 case "Codigo":
-                    $var['variable'] = 'Codigo';
-                    $this->load->view('plantilla', $var);
+                    $this->load->view('codigo');
                     break;
                 case "muestra_presupuestos":
-                    $var['variable'] = 'muestra_presupuestos';
-                    $this->load->view('plantilla', $var);
+                    $this->load->view('mis_presupuestos');
                     break;
                 case "presupuestosAntiguos":
                     $var['variable'] = 'presupuestosAntiguos';
                     $this->load->view('plantilla', $var);
                     break;
                 case "mantenedorMateriales":
-                    $var['variable'] = 'mantenedorMateriales';
-                    $this->load->view('plantilla', $var);
+                    $this->load->view('materiales');
                     break;
                 case "detallesMaterial":
                     $var['variable'] = 'detallesMaterial';
                     $this->load->view('plantilla', $var);
                     break;
                 case "mantenedorUsuarios":
-                    $var['variable'] = 'mantenedorUsuarios';
-                    $this->load->view('plantilla', $var);
+                    $this->load->view('usuarios');
                     break;
                 case "detallesPersona":
                     $var['variable'] = 'detallesPersona';

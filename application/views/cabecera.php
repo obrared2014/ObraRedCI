@@ -48,7 +48,7 @@
                         <?php if($_SESSION['perfil'] != 'USUARIO' ){ ?>
                             <li><a href="?sec=Agrega_Materiales"><b class="glyphicon glyphicon-floppy-open"></b>&nbsp;Agregar Materiales</a></li>  
                         <?php } ?>
-                        <li><a href="Controlador/Logout.php"><b class="glyphicon glyphicon-off"></b>&nbsp;Cerrar Sesión</a></li>
+                        <li><a href="<?php base_url();?>index.php/logout/Logout"><b class="glyphicon glyphicon-off"></b>&nbsp;Cerrar Sesión</a></li>
                     </ul>
                 </li>
                 <script type="text/javascript">document.getElementById("servicios_logout").style.display="none";</script>
