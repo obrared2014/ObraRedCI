@@ -2,7 +2,7 @@
 <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-body">
-            <?php echo form_open('/ValidaLogin');
+            <?php echo form_open('login/ValidaLogin');
             $user = array(
                 'name'          => 'user',
                 'placeholder'   => 'Usuario',
@@ -44,4 +44,4 @@
             <?php echo form_close(); ?>
         </div>
     </div>
-</div>
+</div> 
