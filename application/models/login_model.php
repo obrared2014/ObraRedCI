@@ -10,18 +10,19 @@ class Login_model extends CI_Model {
     function LoginExiste($usuario){
         $user = $usuario['user'];
         $pass = (md5($usuario['pass']));
-        $sql = "SELECT * FROM tbl_login WHERE login_usuario = ? AND login_password = ?";
-        $consulta = $this->db->query($sql,array($user,$pass));
-        if ($consulta -> num_rows() > 0){
-            //$id = $consulta->id_persona;
-            //$datos = $this->db->query("CALL datos_usuario($id)");
-            //if ($datos -> num_rows() > 0)return $datos;
-            //else return null;
+        $this->db->select('*');
+        $this->db->from('tbl_login');
+        $this->db->where('login_usuario', $user);
+        $this->db->where('login_password', $pass);
+        $consulta = $this->db->get();
+        if ($consulta->num_rows() > 0){
+            $id = $consulta->row('id_persona');
+            $query = $this->db->query("CALL datos_usuario($id)");
+            if($query->num_rows() > 0)return $query;
+            else return null;
         }else{
             return null;
         }
     }
 }
-
-
 ?>

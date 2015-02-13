@@ -12,9 +12,22 @@ class Login extends CI_Controller {
             'user' => $this->input->post('user'),
             'pass' => $this->input->post('password_usuario')
         );
-        $data = $this->login_model->LoginExiste($usuario);
-        if ($data->num_rows() > 0){
-            echo "hola mundo";
+        $data['login'] = $this->login_model->LoginExiste($usuario);
+        if ($row = $data['login']->num_rows() > 0){
+            session_start();
+            $_SESSION['id_persona'] = $row['id'];
+            $_SESSION['rut'] = $row['rut'];
+            $_SESSION['nombre'] = $row['nombre'];
+            $_SESSION['ap_paterno'] = $row ['ap_paterno'];
+            $_SESSION['ap_materno'] = $row ['ap_materno'];
+            $_SESSION['email'] = $row ['email'];
+            $_SESSION['actividad'] = $row ['actividad'];
+            $_SESSION['telefono'] = $row ['telefono'];
+            $_SESSION['direccion'] = $row ['direccion'];
+            $_SESSION['perfil'] = $row ['perfil'];
+            header("Location:../Index.php?sec=Presupuesto");
+        }else{
+            
         }
     }
 }
