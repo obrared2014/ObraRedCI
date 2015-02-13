@@ -4,13 +4,13 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h3 class="modal-title" id="myModalLabel">Registro Usuario</h3>
+                <h3 class="modal-title" id="myModalLabel"><strong>Registro Usuario</strong></h3>
             </div>
             <div class="modal-body">
-                <form class="form" action="./Controlador/ValidarRegistro.php" name="registro_usuario" method="POST">
+                <form class="form" action="" name="registro_usuario" method="POST">
                     <div class="row">
                         <div class="col-lg-4">
-                            <input type="text" class="form-control form-group" id="rut_" name="rut" placeholder="Rut" required="true" maxlength="12">
+                            <input type="text" class="form-control form-group" id="rut" name="rut" placeholder="Rut" required="true" maxlength="12">
                         </div>
                     </div>
                     <div class="row">
