@@ -59,3 +59,9 @@
         </div>
     </div>
 </div>
+
+<script> 
+    $('#rut').Rut({
+      on_error: function(){ alert('Rut incorrecto'); document.getElementById('rut').focus();}
+    });
+</script>
