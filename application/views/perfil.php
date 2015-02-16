@@ -1,6 +1,4 @@
 <!-- Perfil de usuario -->
-<script type="text/javascript" src="Controlador/Javascript/jQueryRut.js"></script>
-<script type="text/javascript" src="Controlador/Javascript/jquery.Rut.js"></script>
 <div class="row">
     <div class="col-lg-12">
         <ol class="breadcrumb">
@@ -18,92 +16,173 @@
 </div>
 <div class="row">
     <div class="col-lg-12">
-        <form action="./Controlador/ValidarActualizacion.php" name="perfil_usuario" method="POST">
-            <div class="panel panel-default">
-                <div class="panel-heading" data-toggle="tooltip"><strong>Datos de Usuario</strong></div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <div class="input-group">
-                                        <span class="input-group-addon">Rut</span>
-                                        <input type="text" class="form-control" id="id" name="id" required="true" value="<?php echo $_SESSION['id_persona'] ?>" style="display: none">
-                                        <input type="text" class="form-control" id="rut_" name="rut" required="true" maxlength="12" value="<?php echo $_SESSION['rut'] ?>">
-                                </div>
+        <?php 
+        echo form_open('actualizar_perfil_controller/ActualizarPerfil');
+        $id = array(
+            'id'            => 'id',
+            'name'          => 'id',
+            'required'      => 'true',
+            'style'         => 'display: none',
+            'class'         => 'form-control',
+            'value'         => $_SESSION["id_persona"]
+        );
+        $rut = array(
+            'id'            => 'rutA',
+            'name'          => 'rut',
+            'required'      => 'true',
+            'class'         => 'form-control',
+            'value'         => $_SESSION['rut']
+        );
+        $nombre = array(
+            'id'            => 'nombre',
+            'name'          => 'nombre',
+            'required'      => 'true',
+            'class'         => 'form-control',
+            'value'         => $_SESSION['nombre'],
+            'onkeypress'    => 'ValidaSoloLetras()'
+        );
+        $ap_paterno = array(
+            'id'            => 'ap_paterno',
+            'name'          => 'ap_paterno',
+            'required'      => 'true',
+            'class'         => 'form-control',
+            'value'         => $_SESSION['ap_paterno'],
+            'onkeypress'    => 'ValidaSoloLetras()'
+        );
+        $ap_materno = array(
+            'id'            => 'ap_materno',
+            'name'          => 'ap_materno',
+            'required'      => 'true',
+            'class'         => 'form-control',
+            'value'         => $_SESSION['ap_materno'],
+            'onkeypress'    => 'ValidaSoloLetras()'
+        );
+        $direccion = array(
+            'id'            => 'direccion',
+            'name'          => 'direccion',
+            'required'      => 'true',
+            'class'         => 'form-control',
+            'value'         => $_SESSION['direccion']
+        );
+        $telefono = array(
+            'id'            => 'fono',
+            'name'          => 'fono',
+            'required'      => 'true',
+            'class'         => 'form-control',
+            'value'         => $_SESSION['telefono'],
+            'onkeypress'    => 'ValidaSoloNumeros()'
+        );
+        $actividad = array(
+            'id'            => 'actividad',
+            'name'          => 'actividad',
+            'required'      => 'true',
+            'class'         => 'form-control',
+            'value'         => $_SESSION['actividad']
+        );
+        $email = array(
+            'id'            => 'email',
+            'name'          => 'email',
+            'required'      => 'true',
+            'class'         => 'form-control',
+            'value'         => $_SESSION['email']
+        );
+        $submit = array(
+            'value'         => 'Actualizar Datos',
+            'class'         => 'btn btn-block btn-primary btn-large'
+        );?>
+        <div class="panel panel-default">
+            <div class="panel-heading"><strong>Datos de Usuario</strong></div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Rut</span>
+                                <?php 
+                                echo form_input($id);
+                                echo form_input($rut);
+                                ?>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon">Nombre</span>
-                                    <input type="text" class="form-control" name="nombre" required="true" onkeypress="ValidaSoloLetras()" value="<?php echo $_SESSION['nombre'] ?>">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon">Ap. Paterno</span>
-                                    <input type="text" class="form-control" name="ap_paterno"  required="true" onkeypress="ValidaSoloLetras()" value="<?php echo $_SESSION['ap_paterno'] ?>">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon">Ap. Materno</span>
-                                    <input type="text" class="form-control" name="ap_materno" required="true" onkeypress="ValidaSoloLetras()" value="<?php echo $_SESSION['ap_materno'] ?>">
-                                </div>
+                    <div class="col-lg-8">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Nombre</span>
+                                <?php echo form_input($nombre); ?>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon">Dirección</span>
-                                    <input type="text" class="form-control" name="direccion" required="true" value="<?php echo $_SESSION['direccion'] ?>">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon">Teléfono</span>
-                                    <input type="text" class="form-control" name="telefono" required="true" onkeypress="ValidaSoloNumeros()" value="<?php echo $_SESSION['telefono'] ?>">
-                                </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Ap. Paterno</span>
+                                <?php echo form_input($ap_paterno); ?>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon">Actividad</span>
-                                    <input type="text" class="form-control" name="actividad" required="true" onkeypress="ValidaSoloLetras()" value="<?php echo $_SESSION['actividad'] ?>">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon">E-Mail</span>
-                                    <input type="email" class="form-control" id="email" name="email" required="true" value="<?php echo $_SESSION['email'] ?>">
-                                </div>  
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Ap. Materno</span>
+                                <?php echo form_input($ap_materno); ?>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-4">
-                    <div class="form-group">
-                        <input type="" class="btn btn-block btn-primary btn-large" value="Actualizar datos">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Dirección</span>
+                                <?php echo form_input($direccion); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Teléfono</span>
+                                <?php echo form_input($telefono); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Actividad</span>
+                                <?php echo form_input($actividad); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">E-mail</span>
+                                <?php echo form_input($email); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-lg-offset-4">
+                        <div class="form-group">
+                            <?php echo form_submit($submit); ?>
+                        </div>
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
+        <?php echo form_close();?>
     </div>
 </div>
+<script> 
+    $('#rutA').Rut({
+      on_error: function(){ alert('Rut incorrecto'); document.getElementById('rutA').focus();}
+    });
+</script>
