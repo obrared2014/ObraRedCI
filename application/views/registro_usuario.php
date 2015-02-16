@@ -7,54 +7,136 @@
                 <h3 class="modal-title" id="myModalLabel"><strong>Registro Usuario</strong></h3>
             </div>
             <div class="modal-body">
-                <form class="form" action="" name="registro_usuario" method="POST">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <input type="text" class="form-control form-group" id="rut" name="rut" placeholder="Rut" required="true" maxlength="12">
-                        </div>
+                <?php 
+                echo form_open('registro_usuario_controller/ValidaRegistroUsuario');
+                $rut = array(
+                    'id'            => 'rut',
+                    'name'          => 'rut',
+                    'placeholder'   => 'Rut',
+                    'requerid'      => 'true',
+                    'class'         => 'form-control form-group'
+                    );
+                $nombre = array(
+                    'id'            => 'nombre',
+                    'name'          => 'nombre',
+                    'placeholder'   => 'Nombre',
+                    'requerid'      => 'true',
+                    'class'         => 'form-control form-group',
+                    'onkeypress'    => 'ValidaSoloLetras()'
+                );
+                $ap_paterno = array(
+                    'id'            => 'ap_paterno',
+                    'name'          => 'ap_paterno',
+                    'placeholder'   => 'Ap. Paterno',
+                    'requerid'      => 'true',
+                    'class'         => 'form-control form-group',
+                    'onkeypress'    => 'ValidaSoloLetras()'
+                );
+                $ap_materno = array(
+                    'id'            => 'ap_materno',
+                    'name'          => 'ap_materno',
+                    'placeholder'   => 'Ap. Materno',
+                    'requerid'      => 'true',
+                    'class'         => 'form-control form-group',
+                    'onkeypress'    => 'ValidaSoloLetras()'
+                );
+                $direccion = array(
+                    'id'            => 'direccion',
+                    'name'          => 'direccion',
+                    'placeholder'   => 'Dirección',
+                    'requerid'      => 'true',
+                    'class'         => 'form-control form-group'
+                );
+                $email = array(
+                    'id'            => 'email',
+                    'name'          => 'email',
+                    'placeholder'   => 'Email',
+                    'requerid'      => 'true',
+                    'class'         => 'form-control form-group'
+                );
+                $fono = array(
+                    'id'            => 'fono',
+                    'name'          => 'fono',
+                    'placeholder'   => 'Fono',
+                    'requerid'      => 'true',
+                    'class'         => 'form-control form-group',
+                    'onkeypress'    => 'ValidaSoloNumeros()'
+                );
+                $actividad = array(
+                    'id'            => 'actividad',
+                    'name'          => 'actividad',
+                    'placeholder'   => 'Actividad',
+                    'requerid'      => 'true',
+                    'class'         => 'form-control form-group'
+                );
+                $user = array(
+                    'id'            => 'user',
+                    'name'          => 'user',
+                    'placeholder'   => 'Nombre Usuario',
+                    'requerid'      => 'true',
+                    'class'         => 'form-control form-group'
+                );
+                $pass = array(
+                    'id'            => 'pass',
+                    'name'          => 'pass',
+                    'placeholder'   => 'Contraseña',
+                    'requerid'      => 'true',
+                    'class'         => 'form-control form-group'
+                );
+                $submit = array(
+                    'value'         => 'Registrar',
+                    'class'         => 'btn btn-block btn-primary btn-large'
+                );?>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <?php echo form_input($rut);?>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <input type="text" class="form-control form-group" name="nombre" placeholder="Nombre" required="true" onkeypress="ValidaSoloLetras()">
-                        </div>
-                        <div class="col-lg-4">
-                                <input type="text" class="form-control form-group" name="ap_paterno" placeholder="Ap. Paterno" required="true" onkeypress="ValidaSoloLetras()">
-                        </div>
-                        <div class="col-lg-4">
-                            <input type="text" class="form-control form-group" name="ap_materno" placeholder="Ap Materno" required="true" onkeypress="ValidaSoloLetras()">
-                        </div>
+                    <div class="col-lg-8">
+                        &nbsp;
                     </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <input type="text" class="form-control form-group" name="direccion" placeholder="Direccion" required="true">
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <?php echo form_input($nombre);?>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <input type="email" class="form-control form-group" name="email" placeholder="Email" required="true">  
-                        </div>
+                    <div class="col-lg-4">
+                        <?php echo form_input($ap_paterno);?>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <input type="text" class="form-control form-group" name="telefono" placeholder="Fono" required="true" onkeypress="ValidaSoloNumeros()">
-                        </div>
-                        <div class="col-lg-4">
-                            <input type="text" class="form-control form-group" name="actividad" placeholder="Actividad" required="true" onkeypress="ValidaSoloLetras()">
-                        </div>
+                    <div class="col-lg-4">
+                        <?php echo form_input($ap_materno);?>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <input type="text" class="form-control form-group" name="user" placeholder="Usuario" required="true">
-                        </div>
-                        <div class="col-lg-4">
-                            <input type="password" class="form-control form-group" name="password_usuario" placeholder="Contraseña" required="true">
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <?php echo form_input($direccion);?>
                     </div>
-                    <div class="modal-footer">
-                        <input type="submit" class="btn btn-block btn-primary btn-large" value="Registrar"/>
-                        <button type="button" class="btn btn-block btn-danger" data-dismiss="modal">Cerrar <span class="glyphicon glyphicon-remove"></span></button>
-                    </div>                   
-                </form>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <?php echo form_input($email);?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <?php echo form_input($fono);?>
+                    </div>
+                    <div class="col-lg-8">
+                        <?php echo form_input($actividad);?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <?php echo form_input($user);?>
+                    </div>
+                    <div class="col-lg-6">
+                        <?php echo form_input($pass);?>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <?php echo form_submit($submit);?>
+                    <button type="button" class="btn btn-block btn-danger" data-dismiss="modal">Cerrar <span class="glyphicon glyphicon-remove"></span></button>
+                </div>
+                <?php echo form_close();?>
             </div>
         </div>
     </div>

@@ -10,13 +10,13 @@
                 <form class="form" action="" name="formulario_contacto" method="POST">
                     <div class="row">
                         <div class="col-lg-4">
-                            <input type="text" class="form-control form-group" id="contacto_nombre" name="contacto_nombre" placeholder="Nombre" required="true">
+                            <input type="text" class="form-control form-group" id="contacto_nombre" name="contacto_nombre" placeholder="Nombre" required="true" onkeypress="ValidaSoloLetras()">
                         </div>
                         <div class="col-lg-4">
-                            <input type="text" class="form-control form-group" id="contacto_ap_paterno" name="contacto_ap_paterno" placeholder="Ap. Paterno" required="true">
+                            <input type="text" class="form-control form-group" id="contacto_ap_paterno" name="contacto_ap_paterno" placeholder="Ap. Paterno" required="true" onkeypress="ValidaSoloLetras()">
                         </div>
                         <div class="col-lg-4">
-                            <input type="text" class="form-control form-group" id="contacto_ap_paterno" name="contacto_ap_materno" placeholder="Ap. Materno" required="true">
+                            <input type="text" class="form-control form-group" id="contacto_ap_paterno" name="contacto_ap_materno" placeholder="Ap. Materno" required="true" onkeypress="ValidaSoloLetras()">
                         </div>
                     </div>
                     <div class="row">

@@ -5,7 +5,6 @@ class Login_model extends CI_Model {
     function __construct() {
         parent::__construct();
         $this->load->database('default');
-
     }
     function LoginExiste($usuario){
         $user = $usuario['user'];
@@ -17,7 +16,7 @@ class Login_model extends CI_Model {
         $consulta = $this->db->get();
         if ($consulta->num_rows() > 0){
             $id = $consulta->row('id_persona');
-            $query = $this->db->query("CALL datos_usuario($id)");
+            $query = $this->db->query("CALL datos_usuario('$id')");
             if($query->num_rows() > 0)return $query;
             else return null;
         }else{
