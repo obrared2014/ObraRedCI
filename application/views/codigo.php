@@ -97,7 +97,7 @@ if($_GET['id_Codigo']== 06 ){
     echo "<div class='row'>
             <div class='panel-body'>
                 <div class='alert alert-success' role='alert'>
-                    <strong><h3>:) Su perfil se actualizo correctamente.!</h3></strong><br/><br/>
+                    <strong><h3>:) Su perfil se actualizó correctamente.!</h3></strong><br/><br/>
                     <div class='form-group'>
                         <a href='?sec=Perfil'> <button type='button' class='btn btn-block btn-primary'>Aceptar </button></a>
                     </div>     
