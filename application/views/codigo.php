@@ -98,9 +98,8 @@ if($_GET['id_Codigo']== 06 ){
             <div class='panel-body'>
                 <div class='alert alert-success' role='alert'>
                     <strong><h3>:) Su perfil se actualizo correctamente.!</h3></strong><br/><br/>
-                    Debe iniciar sesion nuevamente para refrescar sus datos</br></br>
                     <div class='form-group'>
-                        <button type='button' class='btn btn-block btn-primary' data-toggle='modal' href='#' data-target='#login'>Iniciar Sesión <span class='glyphicon glyphicon-ok'></span></button>
+                        <a href='?sec=Perfil'> <button type='button' class='btn btn-block btn-primary'>Aceptar </button></a>
                     </div>     
                 </div>
             </div>

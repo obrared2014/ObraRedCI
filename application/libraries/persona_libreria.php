@@ -2,7 +2,11 @@
 
 class Persona_libreria{
 
-   function DatosPersona($id){
+   function DatosPersona($id,$que){
+       $destino="?sec=Inicio";
+       if($que=='Actualiza'){
+           $destino="?sec=Codigo&id_Codigo=06";
+       }
        $CI =& get_instance();       
        $CI->load->model('persona_model');
        $datos = $CI->persona_model->PersonaDatos($id);
@@ -18,7 +22,7 @@ class Persona_libreria{
             $_SESSION['telefono'] = $datos->row('telefono');
             $_SESSION['direccion'] = $datos->row('direccion');
             $_SESSION['perfil'] = $datos->row('perfil');
-            redirect(base_url()."?sec=Inicio");
+            redirect(base_url().$destino);
         }else{
             redirect(base_url()."?sec=Codigo&id_Codigo=02");
         }

@@ -18,7 +18,7 @@ class Login_Controller extends CI_Controller {
         $data = $this->login_model->LoginExiste($usuario);
         if(!empty($data)){
             if ($data->num_rows() > 0){
-                $this->persona_libreria->DatosPersona($data->row('id_persona'));
+                $this->persona_libreria->DatosPersona($data->row('id_persona'),'login');
                 ////Esta se puede usar para todo lo que tenga que ver con los usuarios
                 //Sólo hay que mandarle el 
 //                session_start();

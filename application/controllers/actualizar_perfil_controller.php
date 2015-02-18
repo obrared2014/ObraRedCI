@@ -7,6 +7,7 @@ class Actualizar_Perfil_Controller extends CI_Controller {
         $this->load->helper('form');
         $this->load->model('actualizar_perfil_model');
         $this->load->helper('url');
+        $this->load->library('Persona_libreria');
     }
     function ActualizarPerfil(){
         $usuario_actualizado = array (
@@ -22,8 +23,12 @@ class Actualizar_Perfil_Controller extends CI_Controller {
         );
         $data = $this->actualizar_perfil_model->ActualizarPerfil($usuario_actualizado);
         if(!empty($data)){
-            if ($data)redirect(base_url()."?sec=Codigo&id_Codigo=06");
-            else redirect(base_url()."?sec=Codigo&id_Codigo=05");
+            if ($data){
+//                redirect(base_url()."?sec=Codigo&id_Codigo=06");
+                $this->persona_libreria->DatosPersona($this->input->post('id'),'Actualiza');
+            }else{
+                redirect(base_url()."?sec=Codigo&id_Codigo=05");
+            }
         }else{
             redirect(base_url()."?sec=Codigo&id_Codigo=05");
         }

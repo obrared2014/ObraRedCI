@@ -20,9 +20,14 @@ class Actualizar_Perfil_Model extends CI_Model {
         $query = $this->db->query("CALL actualizar_usuario(
                 '$id','$rut','$nombre','$ap_paterno','$ap_materno','$email','$actividad',
                 '$telefono','$direccion')");
-        
-        if($query)return true;
-        else return null;
+        $this->db->close();
+        if($query){
+            
+            return true;
+        }    
+        else{
+            return null;
+        }
     }
 }
 ?>
